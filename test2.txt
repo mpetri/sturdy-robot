@@ -1,5 +1,42 @@
-The Project Gutenberg EBook of Charlotte Temple, by Susanna Rowson
-This eBook is for the use of anyone anywhere at no cost and with
-almost no restrictions whatsoever.  You may copy it, give it away or
-re-use it under the terms of the Project Gutenberg License included
-with this eBook or online at www.gutenberg.org
+Project Gutenberg FAQ 2002
+
+I have a question not answered in this FAQ. How do I ask it?
+
+If it's about how to produce a text, the Volunteers' Board at
+<http://www.gutenberg.net/vol/wwwboard/> is generally the best
+place to ask.
+
+If it's a question of active interest to the general body of
+volunteers, you can ask it on the gutvol-d mailing list. See
+<http://www.gutenberg.net/subs.html> for joining it.
+
+For other questions, you should check our Contact Information page at
+<http://www.gutenberg.net/contactinfo.html> and e-mail the appropriate
+person.
+
+
+       About Project Gutenberg:
+
+G.1.   What is Project Gutenberg?
+G.2.   Where did Project Gutenberg come from?
+G.3.   What has Project Gutenberg achieved?
+G.4.   Who runs Project Gutenberg?
+G.5.   How many people are in Project Gutenberg?
+G.6.   How can I contact Project Gutenberg?
+G.7.   How can I help Project Gutenberg?
+G.8.   How can I keep in touch with what Project Gutenberg is doing?
+G.9.   What is the relationship between Project Gutenberg, Projekt
+       Gutenberg-DE, Project Gutenberg of Australia, and Project Runeberg?
+
+
+       About Project Gutenberg publications:
+
+G.10.  Does Project Gutenberg publish only books?
+G.11.  What books does Project Gutenberg publish?
+G.12.  What other things does Project Gutenberg publish?
+G.13.  How does Project Gutenberg choose books to publish?
+G.14.  What languages does Project Gutenberg publish in?
+G.15.  Why don't you have any / many books about history, geography, science,
+G.16.  Why don't you have any books by Steven King, Tom Clancy,
+       Tolkien, etc.?
+G.17.  Why is Project Gutenberg so set on using Plain Vanilla ASCII?
