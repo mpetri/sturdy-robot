@@ -1,15 +1,36 @@
-The Project Gutenberg EBook of Charlotte Temple, by Susanna Rowson
-This eBook is for the use of anyone anywhere at no cost and with
-almost no restrictions whatsoever.  You may copy it, give it away or
-re-use it under the terms of the Project Gutenberg License included
-with this eBook or online at www.gutenberg.org
+*** START: FULL LICENSE ***
 
-Title: Charlotte Temple
-Author: Susanna Rowson
-Release Date: March 12, 2006 [EBook #171]
-Language: English
+THE FULL PROJECT GUTENBERG LICENSE
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg-tm mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase "Project
+Gutenberg"), you agree to comply with all the terms of the Full Project
+Gutenberg-tm License (available with this file or online at
+http://gutenberg.net/license).
 
 
-Character set encoding: ASCII
-*** START OF THIS PROJECT GUTENBERG EBOOK CHARLOTTE TEMPLE ***
-Produced by Judith Boss and David Widger
+Section 1.  General Terms of Use and Redistributing Project Gutenberg-tm
+electronic works
+
+1.A.  By reading or using any part of this Project Gutenberg-tm
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement.  If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or destroy
+all copies of Project Gutenberg-tm electronic works in your possession.
+If you paid a fee for obtaining a copy of or access to a Project
+Gutenberg-tm electronic work and you do not agree to be bound by the
+terms of this agreement, you may obtain a refund from the person or
+entity to whom you paid the fee as set forth in paragraph 1.E.8.
+
+1.B.  "Project Gutenberg" is a registered trademark.  It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement.  There are a few
+things that you can do with most Project Gutenberg-tm electronic works
+even without complying with the full terms of this agreement.  See
+paragraph 1.C below.  There are a lot of things you can do with Project
+Gutenberg-tm electronic works if you follow the terms of this agreement
+and help preserve free future access to Project Gutenberg-tm electronic
+works.  See paragraph 1.E below.
