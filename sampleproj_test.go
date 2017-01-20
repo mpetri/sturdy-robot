@@ -1,26 +1,28 @@
 package main
 
-import (
-    "testing"
-)
+import "testing" 
 
-type counterTest struct{
-    text string
-    expected int
+   
+
+func TestlineWordCounter(t *testing.T) {
+    counterTests := []counterTest struct{
+    fName string
+    expectedLineCount int
+    expectedWordCount int
 }
-
-var counterTests = []counterTest{
-    counterTest{"/....path.../test1.txt",15},
-    counterTest{"/...path.../test2.txt",5},
-    counterTest{"/...path.../test3.txt",10},
+    {
+    counterTest{"test1.txt",36,13,},
+    
+    counterTest{"test2.txt",43,23,},
+    
+    counterTest{"test3.txt",22,4,},
     }
 
-func TestLineCounter(t *testing.T) {
     for _, cT:= range counterTests{
-        actual,_:=lineCounter(cT.text)
-        if actual != cT.expected{
-            t.Errorf("lineCounter(%s): expected %d, actual %d",cT.text,
-            cT.expected,actual)
+        actualLineCount, actualWordCount,_:=lineWordCounter(cT.fName,"GUTENberG")
+        if actualLineCount != cT.expectedLineCount||actualWordCount != cT.expectedWordCount {
+            t.Errorf("lineWordCounter(%s): expectedLineCount %d, expectedWordCount %d, actualLineCount %d
+            ,actualWordCount %d",cT.fName,cT.expectedLineCount,cT.expectedWordCount,actualLineCount,actualWordCount)
         }
     }
 } 
