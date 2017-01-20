@@ -1,30 +1,20 @@
 package main
 
-import (
-	"bufio"
-	"io/ioutil"
-	"log"
-	"os"
-	"path/filepath"
+import(
+    "flag"
+    "fmt"
+    "os"
+    "log"
+    "path/filepath"
 	"regexp"
-	"strconv"
-	"time"
+    "bufio"
+    "time"
 )
 
-func checkTxt(searchDir string) {
-	filepath.Walk(searchDir, func(path string, f os.FileInfo, _ error) error {
-		if !f.IsDir() {
-			matched, err := regexp.MatchString(".txt", f.Name())
-			if err == nil && matched {
-				numLines, err := lineCounter(path)
-				if err != nil {
-					log.Fatal(err)
-				}
-				writeFile(f.Name(), numLines)
-			}
-		}
-		return nil
-	})
+type txtFile struct{
+    fname string
+    numLines int
+    //wordCount int   
 }
 
 func lineCounter(fname string) (int, error) {
@@ -40,36 +30,72 @@ func lineCounter(fname string) (int, error) {
 	}
 	return counter, scanner.Err()
 }
-
-func writeFile(fname string, numLines int) {
-	file, err := os.OpenFile("proj.csv", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0666)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-
-	buf := []byte(fname + "," + strconv.Itoa(numLines) + "\n")
-	_, err = file.Write(buf)
-	if err != nil {
-		log.Fatal(err)
-	}
+func printFile(fp *os.File) filepath.WalkFunc{
+    return func(path string, f os.FileInfo, err error) error{
+        if err != nil {
+            log.Print(err)
+            return nil
+        }
+        if !f.IsDir() {
+			matched, err := regexp.MatchString(".txt", f.Name())
+			if err == nil && matched {
+                tF := new(txtFile)
+                tF.fname = f.Name()
+                tF.numLines,err = lineCounter(path)
+				if err != nil {
+					log.Fatal(err)
+				}
+                writeToFile(fp, tF)
+			}
+		}
+		return nil
+    }
 }
 
-func writeHeader() {
-	err := ioutil.WriteFile("proj.csv", []byte("File Name, Number of Lines\n"), 0666)
-	if err != nil {
-		log.Fatal(err)
-	}
+func  writeToFile(file *os.File, tf *txtFile){
+    fmt.Fprintf(file, "%s,%d,%d\n",tf.fname,tf.numLines)
 }
 
-func main() {
-	start := time.Now()
+func writeHeader(file *os.File) {
+    fmt.Fprintf(file,"File Name, Number of Lines\n")
+}
+func safe_open_file() *os.File{
+    file, err := os.Create("result.csv")
+    if err != nil{
+        log.Fatal(err)
+    }
+    return file
+}
+func close_file(file *os.File){
+    err:=file.Close()
+    if err!=nil{
+        log.Fatal(err)
+    }
+}
 
-	writeHeader()
-	searchDir := os.Args[1]
-	checkTxt(searchDir)
+func main(){
+    start := time.Now()
+    
+    var filedir string
+    flag.StringVar(&filedir,"filedir","","Directory you wish to access")
+    //flag.StringVar(&wordPtr,"word","gutenberg","A specific word you wish to find")
+    //flag.Parse()
+    //filedir := flag.Arg[1]
+    //word:=flag.Args(2)
+    flag.Parse()
+    if filedir == ""{
+        log.Fatal("not enough argument")
+    }
 
-	elapsed := time.Since(start)
+    fp := safe_open_file()
+    writeHeader(fp)
+    err:=filepath.Walk(filedir, printFile(fp))
+    if err!=nil{
+        log.Fatal(err)
+    }
+    close_file(fp)
+
+    elapsed := time.Since(start)
 	log.Printf("took %s", elapsed)
-
 }
+
